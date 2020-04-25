@@ -7,11 +7,12 @@ programa
 		// Brasil permite a partir de 18 anos
 		// EUA permite a partir de 21 anos
 		// Portugal sem idade mínima
-		// Versão 2.0
+		// Versão 3.0
 		// 25/04/2020
 		
 		cadeia pais
 		inteiro idade
+		logico permitido = verdadeiro
 		
 		escreva ("Country/País? (BRA, USA, POR): ")
 		leia(pais)
@@ -31,38 +32,46 @@ programa
 		limpa()
 
 
-		se(pais == "BRA" e idade >= 18)
+		se((pais == "BRA" e idade >= 18) ou (pais == "USA" e idade >=21) ou (pais == "POR"))
 		{
 
+			permitido = verdadeiro
+			
+		}senao
+
+		se((pais == "BRA") ou (pais == "USA"))
+		{
+
+			permitido = falso
+		}
+
+		se(permitido e (pais == "BRA" ou pais == "POR"))
+		{
+			
 			escreva ("Prescrição autorizada!")
-			
-		}senao
-
-		se(pais == "BRA" e idade < 18)
-		{
-			escreva ("Você possui ", idade , " anos de idade e a prescrição não está autorizada para menores de 18 anos!")
-			
-		}senao
-
-		se(pais == "USA" e idade >= 21)
-		{
-
-			escreva ("The Prescription is allowed")
-			
-		}senao 
-
-		se(pais == "USA" e idade < 21)
-		{
-
-			escreva ("You have ", idade , " years old and the prescription is not allowed for under 21 years old! ")
 			
 		}senao
 		
-		se(pais == "POR")
+		se(permitido e (pais == "USA"))
 		{
 
-			escreva ("Prescrição autorizada!")
+			escreva ("The Prescription is allowed")
+		}senao
+
+		se(pais == "USA")
+		{
+
+			escreva ("You have ", idade , " years old and the prescription is not allowed for under 21 years old! ")	
+			
+		}senao		
+
+		se(pais == "BRA")
+		{
+
+			escreva ("Você possui ", idade , " anos de idade e a prescrição não está autorizada para menores de 18 anos!")		
+		
 		}
+	
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -70,7 +79,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 200; 
+ * @POSICAO-CURSOR = 946; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

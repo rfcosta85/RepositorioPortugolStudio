@@ -50,6 +50,13 @@ programa
 			
 			escreva ("Prescrição autorizada!")
 			
+		}senao		
+
+		se(pais == "BRA")
+		{
+
+			escreva ("Você possui ", idade , " anos de idade e a prescrição não está autorizada para menores de 18 anos!")		
+		
 		}senao
 
 		se(permitido e (pais == "USA"))		
@@ -63,13 +70,6 @@ programa
 
 			escreva ("You have ", idade , " years old and the prescription is not allowed for under 21 years old! ")	
 			
-		}senao		
-
-		se(pais == "BRA")
-		{
-
-			escreva ("Você possui ", idade , " anos de idade e a prescrição não está autorizada para menores de 18 anos!")		
-		
 		}
 	
 	}
@@ -79,7 +79,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 898; 
+ * @POSICAO-CURSOR = 948; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

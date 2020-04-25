@@ -7,7 +7,7 @@ programa
 		// Brasil permite a partir de 18 anos
 		// EUA permite a partir de 21 anos
 		// Portugal sem idade mínima
-		// Versão 1.0
+		// Versão 2.0
 		// 25/04/2020
 		
 		cadeia pais
@@ -17,7 +17,16 @@ programa
 		leia(pais)
 		limpa()
 
-		escreva ("Qual a idade? ")
+		se(pais == "BRA" ou pais == "POR")
+		{
+
+			escreva ("Qual é a sua idade? ")
+			
+		}senao
+		{
+			escreva ("What is your age? ")
+		}
+		
 		leia(idade)
 		limpa()
 
@@ -61,7 +70,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 218; 
+ * @POSICAO-CURSOR = 200; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

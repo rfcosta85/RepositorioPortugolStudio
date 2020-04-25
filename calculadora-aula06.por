@@ -19,6 +19,8 @@ programa
 		escreva (numero1, " ", operacao , " ") 
 		leia (numero2)
 		limpa()
+		
+		
 
 		se(operacao == "+")
 		{
@@ -51,10 +53,11 @@ programa
 		{
 
 			resultado = 0.0
+			escreva("Por favor escolha uma operação válida! ")
 			
 		}
 
-		escreva ("O resultado de ", numero1, " ", operacao, " ", numero2, " =  ", resultado)
+		escreva (numero1, " ", operacao, " ", numero2, " =  ", resultado)
 			
 	}
 }
@@ -63,7 +66,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 539; 
+ * @POSICAO-CURSOR = 698; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
